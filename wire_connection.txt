@@ -1,0 +1,30 @@
+used fan motor to generate electricity, so wire connection 
+
+3. 📟 OLED Display (SSD1306, I2C)
+OLED Pin	Arduino Uno
+GND	GND
+VCC	5V
+SCL	A5
+SDA	A4
+4. ⚡ Voltage Measurement
+
+If the fan is generating a small DC voltage (e.g., 0–5V), connect one terminal to GND, and the other to A1 to read voltage:
+
+    Fan positive ➜ A1
+
+    Fan negative ➜ GND
+
+Make sure voltage doesn’t exceed 5V!
+✅ Summary of Connections
+Component	Connect To
+Fan Motor +	ACS712 IP+
+Fan Motor –	GND (also Arduino GND)
+ACS712 IP-	Load + (optional) or open
+ACS712 Vout	Arduino A0 (current sensing)
+Fan + (via voltage divider if needed)	Arduino A1 (voltage sensing)
+ACS712 VCC	Arduino 5V
+ACS712 GND	Arduino GND
+OLED VCC	Arduino 5V
+OLED GND	Arduino GND
+OLED SCL	Arduino A5
+OLED SDA	Arduino A4
